@@ -5,7 +5,8 @@
     "dev": "concurrently --kill-others \"bun run dev:api\" \"bun run dev:app\"",
     "dev:api": "cd packages/api && bun dev",
     "dev:app": "cd packages/app && bun dev",
-    "lint": "eslint packages --ext .ts,.vue --max-warnings=0"
+    "lint": "eslint packages --ext .ts,.vue --max-warnings=0",
+    "prepare": "husky"
   },
   "workspaces": [
     "packages/*"
@@ -16,6 +17,7 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.10",
     "prettier": "^3.2.5"
   }
 }
