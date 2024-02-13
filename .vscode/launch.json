@@ -1,0 +1,40 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Nuxt & Hono",
+      "configurations": ["Nuxt: Chrome", "Nuxt: Server", "Hono: API"]
+    }
+  ],
+  "configurations": [
+    {
+      "type": "bun",
+      "internalConsoleOptions": "neverOpen",
+      "request": "launch",
+      "name": "Hono: API",
+      "program": "${workspaceFolder}/packages/api/src/index.ts",
+      "cwd": "${workspaceFolder}/packages/api",
+      "stopOnEntry": false,
+      "watchMode": true
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Nuxt: Chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/packages/app"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Nuxt: Server",
+      "outputCapture": "std",
+      "cwd": "${workspaceFolder}/packages/app",
+      "program": "${workspaceFolder}/node_modules/nuxi/bin/nuxi.mjs",
+      "args": ["dev"]
+    }
+  ]
+}

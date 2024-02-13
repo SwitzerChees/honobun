@@ -1,0 +1,15 @@
+{
+  "name": "honobun",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others \"bun run dev:api\" \"bun run dev:app\"",
+    "dev:api": "cd packages/api && bun dev",
+    "dev:app": "cd packages/app && bun dev"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
